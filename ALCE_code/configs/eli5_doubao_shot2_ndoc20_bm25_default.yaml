@@ -1,0 +1,12 @@
+---
+prompt_file: prompts/eli5_default.json
+eval_file: data/eli5_eval_bm25_top100.json
+shot: 2
+ndoc: 20
+dataset_name: eli5
+tag: bm25
+model: ep-20250123113406-7vzr5
+custom_api: true
+my_api_url: https://ark.cn-beijing.volces.com/api/v3/chat/completions
+my_api_key: 0608ec35-fca7-4552-b8ef-7434a8ad3652
+max_length: 16384
