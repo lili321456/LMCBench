@@ -10,7 +10,7 @@
         <img alt="arXiv Paper" src="https://img.shields.io/badge/Paper-arXiv-red">
     </a> -->
     &nbsp&nbsp
-    <a href="https://huggingface.co/datasets/lmc12345678/ACL2025_LMCBench_dataset">
+    <a href="https://huggingface.co/datasets/lmc12345678/LMCBench_dataset">
         <img alt="HuggingFace Dataset" src="https://img.shields.io/badge/Hugging%20Face-FFD21E?logo=huggingface&logoColor=000">
     </a>
 </p>
@@ -62,7 +62,7 @@ Our benchmark dataset consists of over 2,400 query-response pairs where response
 ### 1. Clone the project repository
 
 ```bash
-git clone https://anonymous.4open.science/r/ACL2025_LMCBench-73A4
+git clone https://anonymous.4open.science/r/LMCBench-5B1F
 ```
 
 ### 2. Set up the environment
