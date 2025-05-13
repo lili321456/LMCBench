@@ -69,26 +69,3 @@ def ndcg(machine_scores, artificial_scores):
 ndcg_score = ndcg(machine, artificial)
 
 print(f"NDCG Score: {ndcg_score:.4f}")
-
-
-def calculate_auc(machine_scores, artificial_scores, threshold=0.57):
-    """
-    The AUC values of model prediction accuracy and manual labeling accuracy were calculated.
-
-    para：
-    - machine_scores: Accuracy list of model predictions (floating point)
-    - artificial_scores: Manually annotated accuracy list (floating point numbers)
-    - threshold: Binary threshold (default: 0.5)
-
-    return：
-    - value of AUC 
-    """
-    # The manual labeling accuracy is converted to two-class labels
-    binary_labels = [1 if score >= threshold else 0 for score in artificial_scores]
-    auc_value = roc_auc_score(binary_labels, machine_scores)
-    
-    return auc_value
-
-# Calculating AUC
-auc_result = calculate_auc(machine, artificial)
-print("AUC:", auc_result)
