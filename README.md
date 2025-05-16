@@ -171,7 +171,7 @@ python model_result_stats.py
    ```
    The sampling results are located at [LMCBench Dataset](https://huggingface.co/datasets/lmc12345678/LMCBench_dataset/tree/main/ALCE_data/100sample).  
 
-4. **Run the evaluation script**  
+4. **Run Evaluation Script**  
    Finally, run the evaluation script to evaluate the performance of the model. The evaluation script is called `eval.py`:
    
    ```bash
