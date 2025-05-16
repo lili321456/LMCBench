@@ -157,19 +157,42 @@ python model_result_stats.py
 ### ALCE Experiment Steps
 1. **Run Model-Specific Bash Scripts**  
    Execute the bash script corresponding to each model. These scripts are located in the ALCE_code directory. For example:
+   
    ```bash
    bash ALCE_code/run_Llama3.3_70B_configs.bash
    ```
-This script will start the training and inference process of the specified model (Llama3.3_70B).
+   This script will start the training and inference process of the specified model (Llama3.3_70B).
 
 2. **Sampling results**  
     After running the model script, sample the results to obtain a manageable dataset for evaluation. The sampling results are located at [LMCBench Dataset](https://huggingface.co/datasets/lmc12345678/LMCBench_dataset/tree/main/ALCE_data/100sample).  
 
-3. **Run the evaluation script**
-Finally, run the evaluation script to evaluate the performance of the model. The evaluation script is called eval.py:
+3. **Run the evaluation script**  
+   Finally, run the evaluation script to evaluate the performance of the model. The evaluation script is called `eval.py`:
+   
+   ```bash
+   python ALCE_code/eval.py --f {path/to/100data/file} --citations --no_rouge
+   ```
+### LongCite Experiment Steps
 
+1. **Run Prediction Script**  
+   Execute the `pred_one_shot.py` script to generate predictions. The script is located in the `LongCite_code` directory:
+   
+   ```bash
+   python LongCite_code/pred_one_shot.py
+   ```
+   This script will process the input data and generate prediction results.
 
+   *In the `cite_model` field, enter the corresponding model name, and in the `is_open` field, enter the Boolean value of whether it is an open source model. If it is an open source model, enter `True`, otherwise enter `False`.*
+   
+2. **Run Evaluation Script**  
+   After generating the prediction results, run the `eval_cite.py` script to evaluate the performance. The script is located in the `LongCite_code` directory:
+   
+   ```bash
+   python LongCite_code/eval_cite.py
+   ```
+   The script will provide the evaluation results.
 
+   *Fill in the absolute path of the prediction result file in the `pred_paths` of the file.*
 
 ## Device Usage
 | Experiment Name | Total Cards | Number of Nodes | Cards per Node                            |
