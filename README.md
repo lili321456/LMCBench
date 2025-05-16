@@ -179,7 +179,7 @@ python model_result_stats.py
    ```
 ### LongCite Experiment Steps
 1. **Sampling results**  
-   Execute the `sample.py` script to sample 100 data.
+   Sample 100 data for evaluation.
 
    ```bash
    python sample.py
