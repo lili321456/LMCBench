@@ -10,12 +10,12 @@ API_KEYS = {
     # "anthropic": '',
     # 'vllm': 'token-abc123',
     "open": '',
-    "gpt": "sk-FTJ9M5kA8dbynz26fvJHbJMpHKPF7ny9s2Xy9gjZ8OJHWtFI",
-    "baichuan":"sk-84105483f548e0855736af7cbdd79150",
-    "moonshot": "sk-RSwjF2Nb3vAC5MyI5jgsWZLCLJwoF2Ro7EyCcUpSwXtJcPg2",
-    "doubao": "0608ec35-fca7-4552-b8ef-7434a8ad3652",
-    "deepseek_v3":"sk-FTJ9M5kA8dbynz26fvJHbJMpHKPF7ny9s2Xy9gjZ8OJHWtFI",
-    "glm-4-plus":"003316014c2c4f7c932127a6486e2180.hscLE45CoqpiRaBE"
+    "gpt": "",
+    "baichuan":"",
+    "moonshot": "",
+    "doubao": "",
+    "deepseek_v3":"",
+    "glm-4-plus":""
 }
 
 API_URLS = {
@@ -23,12 +23,12 @@ API_URLS = {
     # 'zhipu': 'https://open.bigmodel.cn/api/paas/v4/chat/completions',
     # "anthropic": 'https://api.anthropic.com/v1/messages',
     # 'vllm': 'http://127.0.0.1:8000/v1/chat/completions',
-    'open': 'http://101.132.252.74:20016/proxy_generate',
-    "gpt": "http://123.129.219.111:3000/v1/chat/completions",
+    'open': '',
+    "gpt": "",
     "baichuan":"https://api.baichuan-ai.com/v1/chat/completions",
     "moonshot": "https://api.moonshot.cn/v1/chat/completions",
     "doubao": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
-    "deepseek_v3":"http://123.129.219.111:3000/v1/chat/completions",
+    "deepseek_v3":"",
     #"glm":"https://open.bigmodel.cn/api/paas/v4/chat/completions"
 }
 
