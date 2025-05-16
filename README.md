@@ -220,15 +220,15 @@ All graphics cards are MetaX C500 and the memory is 64G.
 |    |----utils.py
 |----LongCite_code
 |    |----utils
-|    |    |----llm_api.py                           # The script 
-|    |    |----retrieve.py                          # The script 
+|    |    |----llm_api.py                           # The script for providing an interface calling tool for interacting with different language model services.
+|    |    |----retrieve.py                          # The script for providing a functional module for processing text data.
 |    |    |----zhipu_embedding.py                   # The script 
 |    |----auto_scorer.py                            # The script 
 |    |----cnt_citation_len.py                       # The script 
 |    |----eval_cite.py                              # The script 
 |    |----eval_correct.py                           # The script 
-|    |----pred_one_shot.py                          # The script 
-|    |----sample.py                                 # The script 
+|    |----pred_one_shot.py                          # The script for calling the language model to generate answers, and post-processes the generated answers.
+|    |----sample.py                                 # The script for Randomly extracting 100 sample data with prompt length less than 31k.
 |----figure                                         # images used in documentation							
 |----main_scripts
 |    |----api_large_experiment.py                   # The script for model generating citations with calling APIs
