@@ -137,6 +137,22 @@ Run the following command for model inference：
 python api_large_experiment.py
 ```
 
+### 5. Evaluation
+
+Run the following command to evaluate your generations, and aggregate the final results.
+
+Make sure to set the correct input(`model`, `f_res`, `og_file_path`).
+
+- `model` is the model which generated the citations
+- `f_res` is the path to the generations data file
+- `log_file_path` is the path to store the resulting statistics
+
+```
+cd ..
+cd statistics_scripts
+python model_result_stats.py
+```
+
 ## Running Experiments for ALCE and LongCite
 ### ALCE Experiment Steps
 1. **Run Model-Specific Bash Scripts**  
