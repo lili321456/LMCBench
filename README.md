@@ -161,19 +161,23 @@ python model_result_stats.py
    ```bash
    bash ALCE_code/run_Llama3.3_70B_configs.bash
    ```
-   This script will start the training and inference process of the specified model (Llama3.3_70B).
+   This script will start the inference process of the specified model (Llama3.3_70B).
 
 2. **Sampling results**  
-    After running the model script, sample the results to obtain a manageable dataset for evaluation. The sampling results are located at [LMCBench Dataset](https://huggingface.co/datasets/lmc12345678/LMCBench_dataset/tree/main/ALCE_data/100sample).  
+   After running the model script, sample 100 data for each result to obtain a manageable dataset for evaluation using the following script.
 
-3. **Run the evaluation script**  
+   ```bash
+   python pick_100.py
+   ```
+   The sampling results are located at [LMCBench Dataset](https://huggingface.co/datasets/lmc12345678/LMCBench_dataset/tree/main/ALCE_data/100sample).  
+
+4. **Run the evaluation script**  
    Finally, run the evaluation script to evaluate the performance of the model. The evaluation script is called `eval.py`:
    
    ```bash
    python ALCE_code/eval.py --f {path/to/100data/file} --citations --no_rouge
    ```
 ### LongCite Experiment Steps
-
 1. **Run Prediction Script**  
    Execute the `pred_one_shot.py` script to generate predictions. The script is located in the `LongCite_code` directory:
    
@@ -193,6 +197,16 @@ python model_result_stats.py
    The script will provide the evaluation results.
 
    *Fill in the absolute path of the prediction result file in the `pred_paths` of the file.*
+
+## Experimental setting/details
+1. **The evaluation of LMCBench**  
+    Both the main experiments and the manually annotated data were run with a temperature of 0. Additionally, the maximum token length for the main experiments was set to 20.
+   
+2. **The evaluation of ALCE**  
+    The open-source models were configured with a temperature of 1.0, a top p value of 0.95, and a maximum token limit of 300. The closed-source model settings included a temperature of 0.5, a top_p value of 1.0, and a maximum token limit of 300.
+   
+3. **The evaluation of LongCite**  
+    Both open- and closed-source models were confgured with a temperature of 1.0 and a maximum token limit of 1024
 
 ## Device Usage
 | Experiment Name | Total Cards | Number of Nodes | Cards per Node                            |
