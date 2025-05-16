@@ -153,6 +153,13 @@ cd ..
 cd statistics_scripts
 python model_result_stats.py
 ```
+## Running Experiments for ALCE and LongCite
+### ALCE Experiment Steps
+1. **Run Model-Specific Bash Scripts**  
+   Execute the bash script corresponding to each model. These scripts are located in the ALCE_code directory. For example:
+   ```bash
+   bash ALCE_code/run_Llama3.3_70B_configs.bash
+   ```
 ## Device Usage
 | Experiment Name | Total Cards | Number of Nodes | Cards per Node                            |
 | :---------- | ----------: | --------------: | :---------------------------------------- |
