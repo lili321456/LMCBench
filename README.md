@@ -160,6 +160,17 @@ python model_result_stats.py
    ```bash
    bash ALCE_code/run_Llama3.3_70B_configs.bash
    ```
+This script will start the training and inference process of the specified model (Llama3.3_70B).
+
+2. **Sampling results**  
+    After running the model script, sample the results to obtain a manageable dataset for evaluation. The sampling results are located at [LMCBench Dataset](https://huggingface.co/datasets/lmc12345678/LMCBench_dataset/tree/main/ALCE_data/100sample).  
+
+3. **Run the evaluation script**
+Finally, run the evaluation script to evaluate the performance of the model. The evaluation script is called eval.py:
+
+
+
+
 ## Device Usage
 | Experiment Name | Total Cards | Number of Nodes | Cards per Node                            |
 | :---------- | ----------: | --------------: | :---------------------------------------- |
