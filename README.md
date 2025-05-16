@@ -186,7 +186,7 @@ python model_result_stats.py
    ```
    
 2. **Run Prediction Script**  
-   Execute the `pred_one_shot.py` script to generate predictions. The script is located in the `LongCite_code` directory:
+   Execute the `pred_one_shot.py` script to generate predictions using the prepared 100 data samples. The script is located in the `LongCite_code` directory:
    
    ```bash
    python LongCite_code/pred_one_shot.py
