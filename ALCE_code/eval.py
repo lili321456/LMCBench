@@ -299,7 +299,7 @@ def _run_nli_autoais(passage, claim):
                     "claim":claim
                     })
 
-    url = "http://101.132.252.74:20015/proxy_nli_service"
+    url = "http://"
 
     response = requests.request("POST", url, headers=headers, data=payload,timeout=120)
     res_dict = json.loads(response.text)
