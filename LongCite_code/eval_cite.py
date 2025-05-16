@@ -7,7 +7,7 @@ from multiprocessing import Pool
 import traceback
 
 pred_paths = [
-    '/mnt/afs/codes/experiments/wangzhu/LongCite/LongBench-Cite/preds/Qwen2.5_72B.json'
+    '/path/to/preds/Qwen2.5_72B.json'
     # './preds/LongCite-llama3.1-8b.json',
 ]
 
