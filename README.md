@@ -153,7 +153,14 @@ cd ..
 cd statistics_scripts
 python model_result_stats.py
 ```
+## Device Usage
+| Experiment Name | Total Cards | Number of Nodes | Cards per Node                            |
+| :---------- | ----------: | --------------: | :---------------------------------------- |
+| LMCBench    |          88 |              11 | 8 cards per node                          |
+| ALCE        |          30 |               4 | 3 nodes with 8 cards, 1 node with 6 cards |
+| LongCite    |          22 |               3 | 2 nodes with 8 cards, 1 node with 6 cards |
 
+All graphics cards are MetaX C500 and the memory is 64G.
 ## Project Structure
 ```
 |----figure                                         # images used in documentation							
