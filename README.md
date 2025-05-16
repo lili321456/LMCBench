@@ -178,7 +178,14 @@ python model_result_stats.py
    python ALCE_code/eval.py --f {path/to/100data/file} --citations --no_rouge
    ```
 ### LongCite Experiment Steps
-1. **Run Prediction Script**  
+1. **Sampling results**  
+   Execute the `sample.py` script to sample 100 data.
+
+   ```bash
+   python sample.py
+   ```
+   
+2. **Run Prediction Script**  
    Execute the `pred_one_shot.py` script to generate predictions. The script is located in the `LongCite_code` directory:
    
    ```bash
@@ -188,14 +195,7 @@ python model_result_stats.py
 
    *In the `cite_model` field, enter the corresponding model name, and in the `is_open` field, enter the Boolean value of whether it is an open source model. If it is an open source model, enter `True`, otherwise enter `False`.*
 
-2. **Sampling results**  
-   Execute the `sample.py` script to sample 100 data.
-
-   ```bash
-   python sample.py
-   ```
-
-2. **Run Evaluation Script**  
+3. **Run Evaluation Script**  
    After generating the prediction results, run the `eval_cite.py` script to evaluate the performance. The script is located in the `LongCite_code` directory:
    
    ```bash
@@ -206,6 +206,8 @@ python model_result_stats.py
    *Fill in the absolute path of the prediction result file in the `pred_paths` of the file.*
 
 ## Experimental setting/details
+The parameters in "The evaluation of ALCE" and "The evaluation of LongCite" are the ones used when the model generates prediction results. The remaining parameters for evaluating the model's prediction results and obtaining scores are all referenced from ALCE and LongCite.
+
 1. **The evaluation of LMCBench**  
     Both the main experiments and the manually annotated data were run with a temperature of 0. Additionally, the maximum token length for the main experiments was set to 20.
    
