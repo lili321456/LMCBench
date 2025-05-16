@@ -213,7 +213,7 @@ python model_result_stats.py
     The open-source models were configured with a temperature of 1.0, a top p value of 0.95, and a maximum token limit of 300. The closed-source model settings included a temperature of 0.5, a top_p value of 1.0, and a maximum token limit of 300.
    
 3. **The evaluation of LongCite**  
-    Both open- and closed-source models were confgured with a temperature of 1.0 and a maximum token limit of 1024.
+    Both open- and closed-source models were configured with a temperature of 1.0 and a maximum token limit of 1024.
 
 ## Device Usage
 | Experiment Name | Total Cards | Number of Nodes | Cards per Node                            |
