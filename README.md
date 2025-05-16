@@ -137,22 +137,6 @@ Run the following command for model inference：
 python api_large_experiment.py
 ```
 
-### 5. Evaluation with GPT-4
-
-Run the following command to evaluate your generations, and aggregate the final results.
-
-Make sure to set the correct input(`model`, `f_res`, `log_file_path`).
-
-- `model` is the model which generated the citations
-- `f_res` is the path to the generations data file
-- `log_file_path` is the path to store the resulting statistics
-
-
-```bash
-cd ..
-cd statistics_scripts
-python model_result_stats.py
-```
 ## Running Experiments for ALCE and LongCite
 ### ALCE Experiment Steps
 1. **Run Model-Specific Bash Scripts**  
@@ -227,6 +211,24 @@ The parameters in "The evaluation of ALCE" and "The evaluation of LongCite" are 
 All graphics cards are MetaX C500 and the memory is 64G.
 ## Project Structure
 ```
+|----ALCE_code
+|    |----configs/
+|    |----eval.py                                   # The script for ALCE evaluation
+|    |----pick_100.py                               # The script for ALCE pick 100 data samples
+|    |----run.py                                    # The script for ALCE generation
+|    |----run_model_name_configs.bash               # The bash script for ALCE generation using {model_name}
+|    |----utils.py
+|----LongCite_code
+|    |----utils
+|    |    |----llm_api.py                           # The script 
+|    |    |----retrieve.py                          # The script 
+|    |    |----zhipu_embedding.py                   # The script 
+|    |----auto_scorer.py                            # The script 
+|    |----cnt_citation_len.py                       # The script 
+|    |----eval_cite.py                              # The script 
+|    |----eval_correct.py                           # The script 
+|    |----pred_one_shot.py                          # The script 
+|    |----sample.py                                 # The script 
 |----figure                                         # images used in documentation							
 |----main_scripts
 |    |----api_large_experiment.py                   # The script for model generating citations with calling APIs
