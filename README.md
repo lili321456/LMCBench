@@ -222,11 +222,11 @@ All graphics cards are MetaX C500 and the memory is 64G.
 |    |----utils
 |    |    |----llm_api.py                           # The script for providing an interface calling tool for interacting with different language model services.
 |    |    |----retrieve.py                          # The script for providing a functional module for processing text data.
-|    |    |----zhipu_embedding.py                   # The script 
+|    |    |----zhipu_embedding.py                   # The script for calling API to convert text into embedding vectors.
 |    |----auto_scorer.py                            # The script for evaluating the quality of citations in text generation tasks.
-|    |----cnt_citation_len.py                       # The script 
+|    |----cnt_citation_len.py                       # The script for calculating the average length of all citations in the file.
 |    |----eval_cite.py                              # The script for Computing citation-related metrics. (such as recall, precision, and F1 score)
-|    |----eval_correct.py                           # The script 
+|    |----eval_correct.py                           # The script for evaluating the quality of generated answers in text generation tasks.
 |    |----pred_one_shot.py                          # The script for calling the language model to generate answers, and post-processes the generated answers.
 |    |----sample.py                                 # The script for Randomly extracting 100 sample data with prompt length less than 31k.
 |----figure                                         # images used in documentation							
