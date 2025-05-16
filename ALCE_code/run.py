@@ -35,8 +35,8 @@ class LLM:
             OPENAI_ORG_ID = os.environ.get("OPENAI_ORG_ID")
             OPENAI_API_BASE = os.environ.get("OPENAI_API_BASE")
 
-            openai.api_key = "sk-FTJ9M5kA8dbynz26fvJHbJMpHKPF7ny9s2Xy9gjZ8OJHWtFI"
-            openai.api_base = "http://123.129.219.111:3000/v1"
+            openai.api_key = ""
+            openai.api_base = ""
             if args.azure:
                 openai.api_key = OPENAI_API_KEY
                 openai.api_base = OPENAI_API_BASE
