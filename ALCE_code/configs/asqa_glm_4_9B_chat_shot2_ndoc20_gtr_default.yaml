@@ -7,5 +7,5 @@ dataset_name: asqa
 tag: gtr
 model: glm_4_9B_chat
 flask_api: true
-my_api_url: http://101.132.252.74:20013/proxy_generate
+my_api_url: http://
 max_length: 16384
