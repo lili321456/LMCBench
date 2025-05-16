@@ -187,7 +187,14 @@ python model_result_stats.py
    This script will process the input data and generate prediction results.
 
    *In the `cite_model` field, enter the corresponding model name, and in the `is_open` field, enter the Boolean value of whether it is an open source model. If it is an open source model, enter `True`, otherwise enter `False`.*
-   
+
+2. **Sampling results**  
+   Execute the `sample.py` script to sample 100 data.
+
+   ```bash
+   python sample.py
+   ```
+
 2. **Run Evaluation Script**  
    After generating the prediction results, run the `eval_cite.py` script to evaluate the performance. The script is located in the `LongCite_code` directory:
    
