@@ -225,7 +225,7 @@ All graphics cards are MetaX C500 and the memory is 64G.
 |    |    |----zhipu_embedding.py                   # The script 
 |    |----auto_scorer.py                            # The script 
 |    |----cnt_citation_len.py                       # The script 
-|    |----eval_cite.py                              # The script 
+|    |----eval_cite.py                              # The script for Computing citation-related metrics (such as recall, precision, and F1 score)
 |    |----eval_correct.py                           # The script 
 |    |----pred_one_shot.py                          # The script for calling the language model to generate answers, and post-processes the generated answers.
 |    |----sample.py                                 # The script for Randomly extracting 100 sample data with prompt length less than 31k.
