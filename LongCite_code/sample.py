@@ -27,7 +27,7 @@ def process_prompt(js):
             'text': prompt,
             'model_name': model_name
         }
-        url = "http://101.132.252.74:20014/proxy_tokenize"
+        url = ""
         response = requests.post(url, json=data)
 
         response_further = json.loads(response.text)
@@ -43,7 +43,7 @@ def process_prompt(js):
 #测试返回结果长度   
 def remote_tokenize(text, model_name="Qwen2_72B"):
     # 远程服务的 API 地址
-    url = "http://101.132.252.74:20014/proxy_tokenize"
+    url = ""
     
     # 构造请求数据
     payload = {
@@ -60,7 +60,7 @@ def remote_tokenize(text, model_name="Qwen2_72B"):
 #选取测试数据100条
 def select_and_sample_data():
     # 读取数据
-    with open("/mnt/afs/codes/experiments/wangzhu/LongCite/LongBench-Cite/LongBench-Cite.json", "r", encoding="utf-8") as file:
+    with open("/path/to/LongBench-Cite.json", "r", encoding="utf-8") as file:
         ipts = json.load(file)
     
     # 筛选 prompt 长度在 31k 以下的数据
@@ -86,7 +86,7 @@ def select_and_sample_data():
     
 if __name__ == '__main__':
     select_and_sample_data()
-    with open("/mnt/afs/codes/experiments/wangzhu/LongCite/100sample.json", "r", encoding="utf-8") as file:
+    with open("/path/to/100sample.json", "r", encoding="utf-8") as file:
         ipts = json.load(file)
 # 初始化一个列表，用于存储提示符长度小于30k的数据的下标
     valid_indices = []
