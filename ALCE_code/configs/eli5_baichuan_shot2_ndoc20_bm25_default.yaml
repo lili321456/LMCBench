@@ -8,5 +8,5 @@ tag: bm25
 model: baichuan4-turbo
 custom_api: true
 my_api_url: https://api.baichuan-ai.com/v1/chat/completions
-my_api_key: sk-84105483f548e0855736af7cbdd79150
+my_api_key: 
 max_length: 16384
