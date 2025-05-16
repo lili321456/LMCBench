@@ -7,5 +7,5 @@ dataset_name: eli5
 tag: bm25
 model: Qwen2_57B
 flask_api: true
-my_api_url: http://101.132.252.74:20013/proxy_generate
+my_api_url: http://
 max_length: 16384
