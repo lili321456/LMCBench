@@ -3,14 +3,14 @@ import random
 import os
 
 '''先分别从五个文件里随机挑选20条数据，保存成5个文件'''
-# with open('/mnt/afs/codes/experiments/wangzhu/ALCE/result/eli5-baichuan4-turbo-bm25-shot2-ndoc20-42.json', 'r', encoding='utf-8') as f:
+# with open('/path/to/result/eli5-baichuan4-turbo-bm25-shot2-ndoc20-42.json', 'r', encoding='utf-8') as f:
 #     data = json.load(f)
 
 # new_data = data.copy()
 # if len(new_data['data']) > 20:
 #     new_data['data'] = random.sample(new_data['data'], 20)
 
-# with open('/mnt/afs/codes/experiments/wangzhu/ALCE/result/new/random_20_data_bm25.json', 'w', encoding='utf-8') as f:
+# with open('/path/to/result/new/random_20_data_bm25.json', 'w', encoding='utf-8') as f:
 #     json.dump(new_data, f, indent=4, ensure_ascii=False)
 
 # print("Saved 20 random items to random_20_data.json")
@@ -62,7 +62,7 @@ def get_source_file(model, type):
     # 特殊处理type名称在文件名中的表示
     file_type = type.replace('asqa_', '').replace('eli5_', '')
     
-    return f"/mnt/afs/codes/experiments/wangzhu/ALCE/result/{dataset}-{model}-{file_type}-shot2-ndoc{ndoc}-42.json"
+    return f"/path/to/result/{dataset}-{model}-{file_type}-shot2-ndoc{ndoc}-42.json"
 
 def main():
     # 需要更改的变量
@@ -71,12 +71,12 @@ def main():
     types = ['asqa_oracle', 'dpr', 'gtr', 'eli5_oracle', 'bm25']
     #type = 'eli5_oracle' # asqa_oracle、bm25、dpr、eli5_oracle、gtr
     # # 待比对的数据
-    #source_file = "/mnt/afs/codes/experiments/wangzhu/ALCE/result/eli5-deepseek-v3-oracle-shot2-ndoc5-42.json"
+    #source_file = "/path/to/result/eli5-deepseek-v3-oracle-shot2-ndoc5-42.json"
     # # 挑选出的20条数据
-    # sample_file_format = "/mnt/afs/codes/experiments/wangzhu/ALCE/result/new/random_20_data_type.json"
+    # sample_file_format = "/path/to/result/new/random_20_data_type.json"
     # sample_file = sample_file_format.replace('type', type)
     # # 输出文件
-    # output_file_format = "/mnt/afs/codes/experiments/wangzhu/ALCE/result/new/model_type_20_data.json"
+    # output_file_format = "/path/to/result/new/model_type_20_data.json"
     # output_file = output_file_format.replace('model', model).replace('type', type)
     # #print(output_file)
 
@@ -94,7 +94,7 @@ def main():
             source_file = get_source_file(model, type)
             
             # 挑选出的20条数据
-            sample_file = f"/mnt/afs/codes/experiments/wangzhu/ALCE/result/new/random_20_data_{type}.json"
+            sample_file = f"/path/to/result/new/random_20_data_{type}.json"
             
             sample_ids = load_sample_ids(sample_file)
             try:
@@ -109,7 +109,7 @@ def main():
                 continue
 
         # 输出文件
-        output_file = f"/mnt/afs/codes/experiments/wangzhu/ALCE/result/100data1/{model}_100_data.json"
+        output_file = f"/path/to/result/100data1/{model}_100_data.json"
         
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(final_data, f, indent=4, ensure_ascii=False)
