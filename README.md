@@ -154,6 +154,15 @@ python model_result_stats.py
 ```
 
 ## Running Experiments for ALCE and LongCite
+
+The code for 'ALCE' and the 'LongCite' section is adopted from the original source code. We have made the following changes based on the source code：
+- For `ALCE`, 
+- For `LongCite`, the 'llm_api.py' file contains logic to determine and assign different APIs and keys based on the model type, while also modifying the request headers.In 'pred_one_shot.py', an is_open parameter has been added to facilitate future determination of whether a model is open-source, as the message formats for the two model types are different. Additionally, truncation processing has been implemented for the return data from open-source models.
+
+Links to ALCE GitHub repository: https://github.com/princeton-nlp/ALCE
+
+Links to LongCite GitHub repository: https://github.com/THUDM/LongCite
+
 ### ALCE Experiment Steps
 1. **Run Model-Specific Bash Scripts**  
    Execute the bash script corresponding to each model. These scripts are located in the ALCE_code directory. For example:
@@ -161,7 +170,7 @@ python model_result_stats.py
    ```bash
    bash ALCE_code/run_Llama3.3_70B_configs.bash
    ```
-   This script will start the inference process of the specified model (Llama3.3_70B).
+   This script will start the inference process of the specified model (Llama3.3_70B) by calling the YAML files in the configs directory of ALCE. The YAML files are written based on the YAML files from the original thesis's GitHub repository.
 
 2. **Sampling results**  
    After running the model script, sample 100 data for each result to obtain a manageable dataset for evaluation using the following script.
@@ -171,7 +180,7 @@ python model_result_stats.py
    ```
    The sampling results are located at [LMCBench Dataset](https://huggingface.co/datasets/lmc12345678/LMCBench_dataset/tree/main/ALCE_data/100sample).  
 
-4. **Run Evaluation Script**  
+3. **Run Evaluation Script**  
    Finally, run the evaluation script to evaluate the performance of the model. The evaluation script is called `eval.py`:
    
    ```bash
