@@ -156,7 +156,8 @@ python model_result_stats.py
 ## Running Experiments for ALCE and LongCite
 
 The code for 'ALCE' and the 'LongCite' section is adopted from the original source code. We have made the following changes based on the source code：
-- For `ALCE`, 
+- For `ALCE`, Add the `flask_api` and `custom_api` parameters and their corresponding `generate_via_flask` and `generate_via_custom` methods in the `run.py` file. This enables both general API calls and HTTP calls to a remote Flask service. Additionally, define the `eos_mapping_dict` to specify different model stop tokens. Modify the logic of `use_chat_api` to add recognition for `gpt-4o`.
+
 - For `LongCite`, the 'llm_api.py' file contains logic to determine and assign different APIs and keys based on the model type, while also modifying the request headers.In 'pred_one_shot.py', an is_open parameter has been added to facilitate future determination of whether a model is open-source, as the message formats for the two model types are different. Additionally, truncation processing has been implemented for the return data from open-source models.
 
 Links to ALCE GitHub repository: https://github.com/princeton-nlp/ALCE
