@@ -73,10 +73,10 @@ conda create -n lmcbench python=3.12 -y
 conda activate lmcbench
 ```
 
-- install requirements 
+- install requirement
 ```bash
 cd lmcbench
-pip install -r requirements.txt
+pip install -r requirement.txt
 ```
 
 ### 3. Enter the main experiment scripts directory
