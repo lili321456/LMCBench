@@ -98,7 +98,7 @@ for res in data_res:
         cnt-=1
         continue
     
-    # clusde
+    # claude
     """
     div_string = model_div_string_dict[model]
     prompt_suffix = prompt.partition(div_string)[-1]
