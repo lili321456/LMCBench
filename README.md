@@ -108,7 +108,7 @@ python citation_try_code.py
 
 ##### Supported models
 
-'Baichuan4-turbo', 'Doubao', 'Moonshot', 'Deepseek-v3', and 'GPT-4-turbo', 'GPT-4o', 'GPT4o-mini' from OpenAI
+'Baichuan4-turbo', 'Doubao', 'Moonshot', 'Deepseek-v3', 'Claude 3.5', 'Gemini 2.0' and 'GPT-4-turbo', 'GPT-4o', 'GPT4o-mini' from OpenAI
 
 ##### Configure the API key
 
@@ -136,6 +136,86 @@ Run the following command for model inference：
 ```bash
 python api_large_experiment.py
 ```
+
+#### c. English data experiments
+
+##### Supported models
+
+Both 'Open-source models' and 'Closed-source models'.
+
+##### Configure the API key
+
+Configure the Key of the preceding model in main_scripts/api_large_experiment_eng_data.py(No need to add "Bearer")
+
+```bash
+key_dict={
+    "gpt-4o-2024-08-06": "",
+    "gpt-4-turbo": "",
+    "gpt-4o-mini": "",
+    "deepseek": "",
+    "moonshot": "",
+    "doubao": "",
+    "deepseek_v3":"",
+    "glm":"",
+    "baichuan":"",
+    "qwen":"",
+    "claude":"",
+    "gemini":""
+}
+```
+
+Locate the `models` variable in 'run_open_models_eng.bash' and modify its list of model names. Execute the script with the command:
+
+```bash
+bash run_open_models_eng.bash
+```
+
+Or you can run the following command：
+
+```bash
+python citationtry_code_eng_data.py --model_name"$model"
+```
+
+#### d. Experiments based on variable seeds
+
+##### Supported models
+
+Both 'Open-source models' and 'Closed-source models'.
+
+##### Configure the API key
+
+Configure the Key of the preceding model in main_scripts/api_large_experiment_confidence_interval.py(No need to add "Bearer")
+
+```bash
+key_dict={
+    "gpt-4o-2024-08-06": "",
+    "gpt-4-turbo": "",
+    "gpt-4o-mini": "",
+    "deepseek": "",
+    "moonshot": "",
+    "doubao": "",
+    "deepseek_v3":"",
+    "glm":"",
+    "baichuan":"",
+    "qwen":"",
+    "claude":"",
+    "gemini":""
+}
+```
+
+To run this, edit the collection of `model_name` and `seeds` in 'run_api_model_confidence_interval.sh' and then execute the script.
+
+```bash
+bash run_api_model_confidence_interval.sh
+```
+
+Or you can run the following command：
+
+```bash
+python api_large_experiment_confidence_interval.py --seed "$seed"--model_name "$model_name"
+```
+
+For the model names, refer to the keys in the `model_name_dict` defined at the beginning of the code. 
 
 ### 5. Evaluation
 
