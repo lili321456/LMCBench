@@ -233,6 +233,8 @@ cd statistics_scripts
 python model_result_stats.py
 ```
 
+The evaluation of the English data results is performed by 'model_result_stats_eng.py', which follows the same usage methodology as the code used for evaluating the Chinese data results.
+
 ## Running Experiments for ALCE and LongCite
 
 The code for `ALCE` and the `LongCite` section is adopted from the original source code. We have made the following changes based on the source code：
