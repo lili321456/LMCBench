@@ -4,7 +4,7 @@ from tqdm import tqdm
 import sys
 import difflib
 
-model = ""
+model = "gemini"
 f_res='/../*.json'  # filename of data
 log_file_path = "/../*_log.txt"  # filename of output log
 sys.stdout = open(log_file_path, 'w', encoding='utf-8')
@@ -97,11 +97,10 @@ for res in data_res:
     if "Error:" in response or "RunTimeError" in response or "当前分组上游负载已饱和" in response:
         cnt-=1
         continue
-    
-    # claude
-    """
-    div_string = model_div_string_dict[model]
-    prompt_suffix = prompt.partition(div_string)[-1]
+    # for claude
+    """ 
+    div_string = model_div_string_dict['claude']
+    prompt_suffix = eng_prompt.partition(div_string)[-1]
 
     last_bracket_pos = prompt_suffix.rfind('[')
     if last_bracket_pos == -1:
@@ -109,31 +108,42 @@ for res in data_res:
         continue
 
     text_before_bracket = prompt_suffix[:last_bracket_pos]
-    cn_dot_pos = text_before_bracket.rfind('。')
+    cn_dot_pos = text_before_bracket.rfind('.')
 
     if cn_dot_pos == -1:
         prefix_in_prompt = prompt_suffix[:last_bracket_pos + 1]
     else:
         prefix_in_prompt = prompt_suffix[cn_dot_pos + 1: last_bracket_pos + 1]
 
-    threshold = 0.95
+    n = prefix_in_prompt.count('[')
+
+    threshold = 0.80
     match = difflib.get_close_matches(
-    prefix_in_prompt,
-    [response[i:i+len(prefix_in_prompt)] for i in range(len(response)-len(prefix_in_prompt)+1)],
-    n=1,
-    cutoff=threshold
+        prefix_in_prompt,
+        [response[i:i+len(prefix_in_prompt)] for i in range(len(response)-len(prefix_in_prompt)+1)],
+        n=1,
+        cutoff=threshold
     )
     if not match:
         cnt -= 1
         continue
 
     idx = response.find(match[0])
-    start = idx + len(match[0])
-    candidate = response[start: start+8]
+
+    bracket_count = 0
+    start = idx
+    for i in range(idx, len(response)):
+        if response[i] == '[':
+            bracket_count += 1
+            if bracket_count == n:
+                start = i + 1
+                break
+
+    candidate = response[start: start + 8]
     response = f'[{candidate}]'
     print(response) """
-    
-    # other
+
+    # original ver.
     if ']' in response:
         index = response.find(']')
         response = response[max(0, index - 8):index]
