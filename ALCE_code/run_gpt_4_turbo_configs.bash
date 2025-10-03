@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 定义一个数组，包含所有需要执行的配置文件名
-configs=("asqa_gpt4_turbo_shot2_ndoc20_dpr_default.yaml" "asqa_gpt4_turbo_shot2_ndoc5_gtr_oracle_default.yaml" "eli5_gpt4_turbo_shot2_ndoc20_bm25_default.yaml" "eli5_gpt4_turbo_shot2_ndoc5_bm25_oracle_default.yaml")
+configs=("asqa_gpt4_turbo_shot2_ndoc20_dpr_default.yaml" "asqa_gpt4_turbo_shot2_ndoc5_gtr_oracle_default.yaml" "eli5_gpt4_turbo_shot2_ndoc20_bm25_default.yaml" "eli5_gpt4_turbo_shot2_ndoc5_bm25_oracle_default.yaml" "asqa_gpt4_turbo_shot2_ndoc20_gtr_default.yaml")
 
 # 遍历数组中的每个配置文件
 for config in "${configs[@]}"; do
