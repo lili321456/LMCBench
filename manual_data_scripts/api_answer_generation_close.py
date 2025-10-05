@@ -16,10 +16,9 @@ key_dict={
     "doubao": "",
     "deepseek_v3":"",
     "glm":""
-
 }
 url_dict={
-    "gpt-4o": "http://47.88.65.188:8405/v1/chat/completions",
+    "gpt-4o": "http://*/v1/chat/completions",
     "baichuan":"https://api.baichuan-ai.com/v1/chat/completions",
     "moonshot": "https://api.moonshot.cn/v1/chat/completions",
     "doubao": "https://ark.cn-beijing.volces.com/api/v3/chat/completions",
