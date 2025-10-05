@@ -345,12 +345,12 @@ All graphics cards are MetaX C500 and the memory is 64G.
 |    |----handling_errors.py                        # The script for open-source model rerunning the errors
 |    |----handling_errors_api.py                    # The script for model rerunning the errors with calling APIs
 |----manual_data_scripts								
-|    |----api_answer_generation.py                  # The script for model generating 100 complete answers with calling APIs
-|    |----lable_prompt_data_generate_not_calling_model.py        # The script for preparing prompt data required for 100 complete citations without calling model
-|    |----label_prompt_result_generate.py           # The script for open-source model generating 100 complete answers with calling APIs
-|    |----label_prompt_result_generate_glm_4_9B_chat.py
-|    |----label_prompt_result_generate_gpt.py
-|    |----pick_100_citations.py
+|    |----api_answer_generation_close.py            # The script for closed-source model generating 100 complete answers with calling APIs
+|    |----api_answer_generation_glm_4_9B_chat.py    # The script for glm generating 100 complete answers with calling APIs
+|    |----api_answer_generation_gpt.py              # The script for gpt generating 100 complete answers with calling APIs
+|    |----api_answer_generation_open.py             # The script for open-source model generating 100 complete answers with calling APIs
+|    |----pick_100_citations.py                     # The script for preparing 100 citations for manual annotation (HTML format)
+|    |----pick_100_data.py                          # The script for preparing prompt data required for 100 citations without calling model
 |----post_mounted_scripts
 |    |----post-mounted_prompt_generate.py           # The script for qwen model generating citations with post-mounted format prompt
 |    |----post-mounted_prompt_generate_rerun.py
