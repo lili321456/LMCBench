@@ -109,7 +109,7 @@ def item_processing(dic:dict):
         return {
             "category": category,
             "output": output,
-            "gpt prompt": new_prompt,
+            "new prompt": new_prompt,
             "response": "{}: {}".format(type(e).__name__, e)
         }
     dic_new={
